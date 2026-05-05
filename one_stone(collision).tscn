@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm1ekecsltmyw"]
+
+[ext_resource type="PackedScene" uid="uid://xp5he67gl8t" path="res://Blender3DModels/OneStone(COLLISION).glb" id="1_0vrqg"]
+[ext_resource type="Material" uid="uid://i0jgjmbbl2m5" path="res://addons/proton_scatter/demos/assets/materials/m_rock.tres" id="2_wvc8k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0vrqg"]
+size = Vector3(1.4819336, 1.1577148, 1.2197266)
+
+[node name="OneStone(COLLISION)" instance=ExtResource("1_0vrqg")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="Icosphere" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_wvc8k")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0.00024413067, 0.58232105, 0.10986326)
+shape = SubResource("BoxShape3D_0vrqg")

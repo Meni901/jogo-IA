@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5wk6d6kqmq2l"]
+
+[ext_resource type="PackedScene" uid="uid://dga4klregd82" path="res://addons/proton_scatter/demos/showcase.tscn" id="1_lou5n"]
+[ext_resource type="PackedScene" uid="uid://c3ix8b3r2wrli" path="res://CharacterWithJuice.tscn" id="2_a77a3"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="ProtonScatterShowcase" parent="." instance=ExtResource("1_lou5n")]
+
+[node name="Player" parent="." instance=ExtResource("2_a77a3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3162422, 2, -0.67825985)

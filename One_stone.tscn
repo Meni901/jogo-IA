@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cof7x842war78"]
+
+[ext_resource type="PackedScene" uid="uid://xp5he67gl8t" path="res://Blender3DModels/OneStone(COLLISION).glb" id="1_a58mg"]
+
+[node name="OneStone(COLLISION)" instance=ExtResource("1_a58mg")]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.008636475, 0.48048162, 0.00015258789)
+visible = false
+use_collision = true
+size = Vector3(1.52594, 0.97210693, 1.4642944)

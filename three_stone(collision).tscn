@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsbwyv6jaw3rg"]
+
+[ext_resource type="PackedScene" uid="uid://bmco3cta862s6" path="res://Blender3DModels/ThreeStone(COLLISION).glb" id="1_w3vio"]
+[ext_resource type="Material" uid="uid://i0jgjmbbl2m5" path="res://addons/proton_scatter/demos/assets/materials/m_rock.tres" id="2_be3qy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_be3qy"]
+size = Vector3(1.1449585, 1.2197266, 1.1483154)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qujdo"]
+size = Vector3(0.8788452, 1.0213623, 0.7123718)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qrxfr"]
+size = Vector3(0.79455566, 0.91186523, 0.8310547)
+
+[node name="ThreeStone(COLLISION)" instance=ExtResource("1_w3vio")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0, 0)
+
+[node name="Icosphere" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_be3qy")
+
+[node name="Icosphere_001" parent="." index="1"]
+surface_material_override/0 = ExtResource("2_be3qy")
+
+[node name="Icosphere_002" parent="." index="2"]
+surface_material_override/0 = ExtResource("2_be3qy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, -0.078460656, 0.641957, 0.07415769)
+shape = SubResource("BoxShape3D_be3qy")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." index="4"]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8622615, 0.48919675, 0.049738534)
+shape = SubResource("BoxShape3D_qujdo")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="." index="5"]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" index="0"]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, -1.0099075, 0.458374, 0.3657225)
+shape = SubResource("BoxShape3D_qrxfr")
